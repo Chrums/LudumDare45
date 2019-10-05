@@ -69,9 +69,9 @@ public class StateHistory : MonoBehaviour
             objectState.t = frame;
 
             objectState.dx = obj.transform.position.x; // TODO: Do this
-            objectState.y = obj.transform.position.y;
-            objectState.z = obj.transform.position.z;
-            objectState.t = frame;
+            objectState.dy = obj.transform.position.y;
+            objectState.dz = obj.transform.position.z;
+            objectState.dt = frame;
 
             states[frame % maxFrames][obj] = objectState;
         }
