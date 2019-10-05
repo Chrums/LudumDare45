@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class CharacterController2D : MonoBehaviour
 {
+    public float speed = 0.1f;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -15,6 +17,6 @@ public class CharacterController2D : MonoBehaviour
     {
         float right = Input.GetAxis("Horizontal");
         float down = Input.GetAxis("Vertical");
-        gameObject.transform.Translate(right, down, 0);
+        gameObject.transform.Translate(right * speed, down * speed, 0);
     }
 }

@@ -33,16 +33,16 @@ public class StateHistory : MonoBehaviour
 
     void Update()
     {
-        if (Input.GetButtonDown("Jump"))
+        if (Input.GetButton("Jump"))
         {
-            setFrame(60 * 5);
+            setFrame(frame - 2);
         }
     }
 
     void setFrame(int _frame)
     {
         frame = _frame;
-        var recordedObjects = GameObject.FindGameObjectsWithTag("history");
+        var recordedObjects = GameObject.FindGameObjectsWithTag("History");
         foreach (var obj in recordedObjects)
         {
             obj.SetActive(false);
@@ -59,7 +59,7 @@ public class StateHistory : MonoBehaviour
     // Update is called once per frame
     void LateUpdate()
     {
-        var recordedObjects = GameObject.FindGameObjectsWithTag("history");
+        var recordedObjects = GameObject.FindGameObjectsWithTag("History");
         foreach (var obj in recordedObjects)
         {
             ObjectState objectState = new ObjectState();
