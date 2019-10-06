@@ -19,7 +19,6 @@ public class CharacterController2D : MonoBehaviour
         float right = Input.GetAxis("Horizontal");
         var cast = Physics2D.BoxCast(gameObject.GetComponent<Rigidbody2D>().worldCenterOfMass, gameObject.GetComponent<BoxCollider2D>().size, 0, Vector2.down, 10, 1 << LayerMask.NameToLayer("World"));
         bool willJump = Input.GetAxis("Vertical") > 0 && cast.rigidbody != null && cast.distance < gameObject.GetComponent<BoxCollider2D>().size.y / 2 + 0.02f && gameObject.GetComponent<Rigidbody2D>().velocity.y <= 0;
-        gameObject.GetComponent<Rigidbody2D>().velocity = new Vector2(right * speed, willJump ? 0 : gameObject.GetComponent<Rigidbody2D>().velocity.y);
-        gameObject.GetComponent<Rigidbody2D>().AddForce(new Vector2(0, willJump ? jump : 0));
+        gameObject.GetComponent<Rigidbody2D>().velocity = new Vector2(right * speed, willJump ? jump : gameObject.GetComponent<Rigidbody2D>().velocity.y);
     }
 }
