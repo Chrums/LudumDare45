@@ -39,7 +39,7 @@ public class StateHistory : MonoBehaviour
         }
     }
 
-    void setFrame(int _frame)
+    public void setFrame(int _frame)
     {
         frame = _frame;
         var recordedObjects = GameObject.FindGameObjectsWithTag("History");
@@ -47,7 +47,7 @@ public class StateHistory : MonoBehaviour
         {
             obj.SetActive(false);
         }
-        foreach (var objPair in states[frame])
+        foreach (var objPair in states[frame % maxFrames])
         {
             objPair.Key.transform.SetPositionAndRotation(
                 new Vector3(objPair.Value.x, objPair.Value.y, objPair.Value.z),
