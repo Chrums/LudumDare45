@@ -131,7 +131,7 @@ GameObject:
   - component: {fileID: 39551542}
   - component: {fileID: 39551541}
   m_Layer: 0
-  m_Name: History
+  m_Name: Global
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -433,7 +433,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 2
-  jump: 300
+  jump: 5
 --- !u!50 &994535347
 Rigidbody2D:
   serializedVersion: 4
