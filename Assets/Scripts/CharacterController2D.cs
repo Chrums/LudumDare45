@@ -50,6 +50,22 @@ public class CharacterController2D : MonoBehaviour
         }
 
         rigidbody.velocity = velocity;
+
+        int timePos;
+        if (Dimension2DManager.HorizontalAxis == Dimension2DManager.Dimension.AxisT)
+        {
+            Vector2 pos = gameObject.transform.position;
+            timePos = (int)gameObject.transform.position.x;
+            Dimension2DManager.CurrentFrame = timePos;
+            gameObject.transform.position = pos;
+        }
+        else if (Dimension2DManager.VerticalAxis == Dimension2DManager.Dimension.AxisT)
+        {
+            Vector2 pos = gameObject.transform.position;
+            timePos = (int)gameObject.transform.position.y;
+            Dimension2DManager.CurrentFrame = timePos;
+            gameObject.transform.position = pos;
+        }
     }
 
     private void OnDrawGizmos()

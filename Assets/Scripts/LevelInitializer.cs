@@ -12,6 +12,8 @@ namespace Fizz6.LudumDare45
         [SerializeField]
         GameObject playerSpawn = null;
 
+        bool isFucked = false;
+
         private void Awake()
         {
             Instantiate(playerPrefab);
@@ -41,6 +43,20 @@ namespace Fizz6.LudumDare45
             if (Input.GetButtonDown("Fire1"))
             {
                 Dimension2DManager.SetDimensions(Dimension2DManager.VerticalAxis, Dimension2DManager.HorizontalAxis);
+            }
+
+            if (Input.GetButtonDown("Fire2"))
+            {
+                if (!isFucked)
+                {
+                    Dimension2DManager.SetDimensions(Dimension2DManager.Dimension.AxisX, Dimension2DManager.Dimension.AxisT);
+                    isFucked = true;
+                }
+                else
+                {
+                    Dimension2DManager.SetDimensions(Dimension2DManager.Dimension.AxisX, Dimension2DManager.Dimension.AxisY);
+                    isFucked = false;
+                }
             }
         }
     }

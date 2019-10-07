@@ -29,6 +29,24 @@ public class StateHistory : MonoBehaviour
         {
             states.Add(new Dictionary<GameObject, ObjectState>());
         }
+
+        var recordedObjects = GameObject.FindGameObjectsWithTag("History");
+        foreach (var obj in recordedObjects)
+        {
+
+            ObjectState objectState = new ObjectState();
+            objectState.x = obj.transform.position.x;
+            objectState.y = obj.transform.position.y;
+            objectState.z = obj.transform.position.z;
+            objectState.t = frame;
+
+            objectState.dx = obj.transform.position.x; // TODO: Do this
+            objectState.dy = obj.transform.position.y;
+            objectState.dz = obj.transform.position.z;
+            objectState.dt = frame;
+
+            states[frame % maxFrames][obj] = objectState;
+        }
     }
 
     void Update()
@@ -62,6 +80,7 @@ public class StateHistory : MonoBehaviour
         var recordedObjects = GameObject.FindGameObjectsWithTag("History");
         foreach (var obj in recordedObjects)
         {
+
             ObjectState objectState = new ObjectState();
             objectState.x = obj.transform.position.x;
             objectState.y = obj.transform.position.y;

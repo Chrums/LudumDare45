@@ -6,6 +6,8 @@ namespace Fizz6.LudumDare45
 {
     public class BaseObject : MonoBehaviour
     {
+        public bool Achronal = false;
+
         private new Rigidbody2D rigidbody = null;
 
         private float[][] positionHistory = new float[60 * 60 * 30][];
@@ -46,101 +48,33 @@ namespace Fizz6.LudumDare45
 
         public void OnCurrentFrameChanged(int currentFrame, int nextFrame)
         {
-            UpdatePosition(currentFrame, nextFrame);
-            UpdateVelocity(currentFrame, nextFrame);
-        }
-        private void UpdatePosition(Dimension2DManager.Dimension currentHorizontalDimension, Dimension2DManager.Dimension currentVerticalDimension, Dimension2DManager.Dimension nextHorizontalDimension, Dimension2DManager.Dimension nextVerticalDimension)
-        {
-            float[] previousPositionState = Dimension2DManager.CurrentFrame == 0
-                ? null
-                : positionHistory[Dimension2DManager.CurrentFrame - 1];
-
-            float[] positionState = positionHistory[Dimension2DManager.CurrentFrame] == null
-                ? new float[4] { previousPositionState[0], previousPositionState[1], previousPositionState[2], previousPositionState[3] }
-                : positionHistory[Dimension2DManager.CurrentFrame];
-
-            positionState[(int)currentHorizontalDimension] = transform.position.x;
-            positionState[(int)currentVerticalDimension] = transform.position.y;
-
-            positionHistory[Dimension2DManager.CurrentFrame] = positionState;
-
-            float[] nextState = positionHistory[Dimension2DManager.CurrentFrame];
-
-            float horizontal = nextState[(int)nextHorizontalDimension];
-            float vertical = nextState[(int)nextVerticalDimension];
-            Vector3 position = new Vector3(horizontal, vertical, 0.0f);
-            transform.position = position;
+            UpdateState(currentFrame, nextFrame, Dimension2DManager.HorizontalAxis, Dimension2DManager.VerticalAxis, Dimension2DManager.HorizontalAxis, Dimension2DManager.VerticalAxis);
         }
 
-        private void UpdateVelocity(Dimension2DManager.Dimension currentHorizontalDimension, Dimension2DManager.Dimension currentVerticalDimension, Dimension2DManager.Dimension nextHorizontalDimension, Dimension2DManager.Dimension nextVerticalDimension)
-        {
-            float[] previousPositionState = Dimension2DManager.CurrentFrame == 0
-                ? null
-                : positionHistory[Dimension2DManager.CurrentFrame - 1];
-
-            float[] positionState = positionHistory[Dimension2DManager.CurrentFrame] == null
-                ? new float[4] { previousPositionState[0], previousPositionState[1], previousPositionState[2], previousPositionState[3] }
-                : positionHistory[Dimension2DManager.CurrentFrame];
-
-            positionState[(int)currentHorizontalDimension] = rigidbody.velocity.x;
-            positionState[(int)currentVerticalDimension] = rigidbody.velocity.y;
-
-            positionHistory[Dimension2DManager.CurrentFrame] = positionState;
-
-            float[] nextState = positionHistory[Dimension2DManager.CurrentFrame];
-
-            float horizontal = nextState[(int)nextHorizontalDimension];
-            float vertical = nextState[(int)nextVerticalDimension];
-            Vector3 position = new Vector3(horizontal, vertical, 0.0f);
-            rigidbody.velocity = position;
-        }
-
-        private void UpdatePosition(int currentFrame, int nextFrame)
+        private void UpdateState(int currentFrame, int nextFrame, Dimension2DManager.Dimension currentHorizontalDimension, Dimension2DManager.Dimension currentVerticalDimension, Dimension2DManager.Dimension nextHorizontalDimension, Dimension2DManager.Dimension nextVerticalDimension)
         {
             float[] previousPositionState = currentFrame == 0
                 ? null
                 : positionHistory[currentFrame - 1];
+            float[] previousVelocityState = currentFrame == 0
+                ? null
+                : velocityHistory[currentFrame - 1];
 
             float[] positionState = positionHistory[currentFrame] == null
                 ? new float[4] { previousPositionState[0], previousPositionState[1], previousPositionState[2], previousPositionState[3] }
                 : positionHistory[currentFrame];
 
-            positionState[(int)Dimension2DManager.HorizontalAxis] = transform.position.x;
-            positionState[(int)Dimension2DManager.VerticalAxis] = transform.position.y;
-
-            positionHistory[currentFrame] = positionState;
-
-            if (currentFrame == nextFrame - 1)
-            {
-                return;
-            }
-
-            float[] nextState = positionHistory[nextFrame];
-            if (positionState == null)
-            {
-                gameObject.SetActive(false);
-                return;
-            }
-
-            float horizontal = nextState[(int)Dimension2DManager.HorizontalAxis];
-            float vertical = nextState[(int)Dimension2DManager.VerticalAxis];
-            Vector3 position = new Vector3(horizontal, vertical, 0.0f);
-            transform.position = position;
-        }
-
-        private void UpdateVelocity(int currentFrame, int nextFrame)
-        {
-            float[] previousVelocityState = currentFrame == 0
-                ? null
-                : velocityHistory[currentFrame - 1];
-
             float[] velocityState = velocityHistory[currentFrame] == null
                 ? new float[4] { previousVelocityState[0], previousVelocityState[1], previousVelocityState[2], previousVelocityState[3] }
                 : velocityHistory[currentFrame];
 
-            velocityState[(int)Dimension2DManager.HorizontalAxis] = rigidbody.velocity.x;
-            velocityState[(int)Dimension2DManager.VerticalAxis] = rigidbody.velocity.y;
+            positionState[(int)currentHorizontalDimension] = transform.position.x;
+            positionState[(int)currentVerticalDimension] = transform.position.y;
 
+            velocityState[(int)currentHorizontalDimension] = rigidbody.velocity.x;
+            velocityState[(int)currentVerticalDimension] = rigidbody.velocity.y;
+
+            positionHistory[currentFrame] = positionState;
             velocityHistory[currentFrame] = velocityState;
 
             if (currentFrame == nextFrame - 1)
@@ -148,23 +82,31 @@ namespace Fizz6.LudumDare45
                 return;
             }
 
-            float[] nextState = velocityHistory[nextFrame];
-            if (velocityState == null)
+            float[] nextPositionState = positionHistory[nextFrame];
+            float[] nextVelocityState = velocityHistory[nextFrame];
+            if (positionState == null || velocityState == null) // TODO: fix
             {
                 gameObject.SetActive(false);
                 return;
             }
 
-            float horizontal = nextState[(int)Dimension2DManager.HorizontalAxis];
-            float vertical = nextState[(int)Dimension2DManager.VerticalAxis];
-            Vector3 velocity = new Vector3(horizontal, vertical, 0.0f);
-            rigidbody.velocity = velocity;
+            if (!(Achronal && (nextHorizontalDimension == Dimension2DManager.Dimension.AxisT || nextVerticalDimension == Dimension2DManager.Dimension.AxisT)))
+            {
+                float horizontalPosition = nextPositionState[(int)nextHorizontalDimension];
+                float verticalPosition = nextPositionState[(int)nextVerticalDimension];
+                Vector3 position = new Vector3(horizontalPosition, verticalPosition, 0.0f);
+                transform.position = position;
+
+                float horizontalVelocity = nextVelocityState[(int)nextHorizontalDimension];
+                float verticalVelocity = nextVelocityState[(int)nextVerticalDimension];
+                Vector3 velocity = new Vector3(horizontalVelocity, verticalVelocity, 0.0f);
+                rigidbody.velocity = velocity;
+            }
         }
 
         private void OnDimensionsChanged(Dimension2DManager.Dimension currentHorizontalDimension, Dimension2DManager.Dimension currentVerticalDimension, Dimension2DManager.Dimension nextHorizontalDimension, Dimension2DManager.Dimension nextVerticalDimension)
         {
-            UpdatePosition(currentHorizontalDimension, currentVerticalDimension, nextHorizontalDimension, nextVerticalDimension);
-            UpdateVelocity(currentHorizontalDimension, currentVerticalDimension, nextHorizontalDimension, nextVerticalDimension);
+            UpdateState(Dimension2DManager.CurrentFrame, Dimension2DManager.CurrentFrame, currentHorizontalDimension, currentVerticalDimension, nextHorizontalDimension, nextVerticalDimension);
         }
     }
 }
