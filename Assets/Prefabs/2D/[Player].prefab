@@ -13,9 +13,10 @@ GameObject:
   - component: {fileID: 1686129547285807378}
   - component: {fileID: 1686129547285807380}
   - component: {fileID: 1686129547285807379}
+  - component: {fileID: 5656341757663284772}
   m_Layer: 0
   m_Name: '[Player]'
-  m_TagString: History
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -95,8 +96,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 56986d0b263f91d4b873f95dd6f57ad9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 2
-  jump: 5
+  speed: 10
+  jump: 20
+  groundedDistance: 0.01
+  isGrounded: 0
 --- !u!61 &1686129547285807380
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -138,9 +141,21 @@ Rigidbody2D:
   m_Mass: 1
   m_LinearDrag: 0
   m_AngularDrag: 0.05
-  m_GravityScale: 0
+  m_GravityScale: 5
   m_Material: {fileID: 0}
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 0
+  m_Constraints: 4
+--- !u!114 &5656341757663284772
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1686129547285807375}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 62a9a134953c9d7458169bea648b2948, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

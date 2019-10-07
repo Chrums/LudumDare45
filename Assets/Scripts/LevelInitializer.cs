@@ -23,6 +23,20 @@ namespace Fizz6.LudumDare45
             }
 
             playerPrefab.transform.position = playerSpawn.transform.position;
+
+            Dimension2DManager.CurrentFrame = 0;
+        }
+
+        public void Update()
+        {
+            if (Input.GetButton("Jump"))
+            {
+                Dimension2DManager.CurrentFrame--;
+            }
+            else if (Dimension2DManager.HorizontalAxis != Dimension2DManager.Dimension.AxisT && Dimension2DManager.VerticalAxis != Dimension2DManager.Dimension.AxisT)
+            {
+                Dimension2DManager.CurrentFrame++;
+            }
         }
     }
 }

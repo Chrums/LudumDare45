@@ -1,8 +1,9 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Dimension2DManager : MonoBehaviour
+public static class Dimension2DManager
 {
     public enum Dimension
     {
@@ -12,24 +13,30 @@ public class Dimension2DManager : MonoBehaviour
         AxisT,
     }
 
-    public Dimension HorizontalAxis = Dimension.AxisX;
-    public Dimension VerticalAxis = Dimension.AxisY;
+    public static Dimension HorizontalAxis = Dimension.AxisX;
+    public static Dimension VerticalAxis = Dimension.AxisY;
 
-    void SetDimensions(Dimension horizontal, Dimension vertical)
+    public static event Action<int, int> CurrentFrameChangeEvent = null;
+
+    private static int currentFrame = 0;
+
+    public static int CurrentFrame
+    {
+        get
+        {
+            return currentFrame;
+        }
+
+        set
+        {
+            CurrentFrameChangeEvent?.Invoke(currentFrame, value);
+            currentFrame = value;
+        }
+    }
+
+    public static void SetDimensions(Dimension horizontal, Dimension vertical)
     {
         HorizontalAxis = horizontal;
         VerticalAxis = vertical;
-    }
-
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
     }
 }
