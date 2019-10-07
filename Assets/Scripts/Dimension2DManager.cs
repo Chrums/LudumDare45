@@ -18,6 +18,8 @@ public static class Dimension2DManager
 
     public static event Action<int, int> CurrentFrameChangeEvent = null;
 
+    public static event Action<Dimension, Dimension, Dimension, Dimension> DimensionChangeEvent = null;
+
     private static int currentFrame = 0;
 
     public static int CurrentFrame
@@ -36,6 +38,7 @@ public static class Dimension2DManager
 
     public static void SetDimensions(Dimension horizontal, Dimension vertical)
     {
+        DimensionChangeEvent?.Invoke(HorizontalAxis, VerticalAxis, horizontal, vertical);
         HorizontalAxis = horizontal;
         VerticalAxis = vertical;
     }

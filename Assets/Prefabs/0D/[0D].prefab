@@ -227,8 +227,6 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
-      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_Sprite: {fileID: 0}
   m_Type: 1
   m_PreserveAspect: 0
@@ -302,8 +300,6 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
-      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_Sprite: {fileID: 0}
   m_Type: 0
   m_PreserveAspect: 0
@@ -377,8 +373,6 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
-      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_text: "\u200B"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 28ebc17e2a0e1eb468fbff4b743ab6a6, type: 2}
@@ -537,8 +531,6 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
-      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_Sprite: {fileID: 0}
   m_Type: 1
   m_PreserveAspect: 0
@@ -592,8 +584,6 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls: []
-    m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
-      Culture=neutral, PublicKeyToken=null
 --- !u!1 &6038382263927566167
 GameObject:
   m_ObjectHideFlags: 0
@@ -719,8 +709,6 @@ MonoBehaviour:
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls: []
-    m_TypeName: UnityEngine.UI.ScrollRect+ScrollRectEvent, UnityEngine.UI, Version=1.0.0.0,
-      Culture=neutral, PublicKeyToken=null
 --- !u!1 &6038382264431607691
 GameObject:
   m_ObjectHideFlags: 0
@@ -897,8 +885,6 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
-      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_text: Done
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 28ebc17e2a0e1eb468fbff4b743ab6a6, type: 2}
@@ -1057,8 +1043,6 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
-      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_Sprite: {fileID: 10917, guid: 0000000000000000f000000000000000, type: 0}
   m_Type: 1
   m_PreserveAspect: 0
@@ -1201,6 +1185,8 @@ MonoBehaviour:
   drawingColorTextMeshProUGUI: {fileID: 6295515107572741693}
   doneDrawingButton: {fileID: 6038382263876622900}
   waitForTime: 1
+  levelPrefab: {fileID: 5401499133445794070, guid: dd530c986c3091c44bc3b95ee375416c,
+    type: 3}
 --- !u!1 &6038382264744201595
 GameObject:
   m_ObjectHideFlags: 0
@@ -1284,8 +1270,6 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
-      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_Sprite: {fileID: 0}
   m_Type: 0
   m_PreserveAspect: 0
@@ -1359,8 +1343,6 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
-      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_Texture: {fileID: 0}
   m_UVRect:
     serializedVersion: 2
@@ -1474,43 +1456,27 @@ MonoBehaviour:
   m_OnEndEdit:
     m_PersistentCalls:
       m_Calls: []
-    m_TypeName: TMPro.TMP_InputField+SubmitEvent, Unity.TextMeshPro, Version=0.0.0.0,
-      Culture=neutral, PublicKeyToken=null
   m_OnSubmit:
     m_PersistentCalls:
       m_Calls: []
-    m_TypeName: TMPro.TMP_InputField+SubmitEvent, Unity.TextMeshPro, Version=0.0.0.0,
-      Culture=neutral, PublicKeyToken=null
   m_OnSelect:
     m_PersistentCalls:
       m_Calls: []
-    m_TypeName: TMPro.TMP_InputField+SelectionEvent, Unity.TextMeshPro, Version=0.0.0.0,
-      Culture=neutral, PublicKeyToken=null
   m_OnDeselect:
     m_PersistentCalls:
       m_Calls: []
-    m_TypeName: TMPro.TMP_InputField+SelectionEvent, Unity.TextMeshPro, Version=0.0.0.0,
-      Culture=neutral, PublicKeyToken=null
   m_OnTextSelection:
     m_PersistentCalls:
       m_Calls: []
-    m_TypeName: TMPro.TMP_InputField+TextSelectionEvent, Unity.TextMeshPro, Version=0.0.0.0,
-      Culture=neutral, PublicKeyToken=null
   m_OnEndTextSelection:
     m_PersistentCalls:
       m_Calls: []
-    m_TypeName: TMPro.TMP_InputField+TextSelectionEvent, Unity.TextMeshPro, Version=0.0.0.0,
-      Culture=neutral, PublicKeyToken=null
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls: []
-    m_TypeName: TMPro.TMP_InputField+OnChangeEvent, Unity.TextMeshPro, Version=0.0.0.0,
-      Culture=neutral, PublicKeyToken=null
   m_OnTouchScreenKeyboardStatusChanged:
     m_PersistentCalls:
       m_Calls: []
-    m_TypeName: TMPro.TMP_InputField+TouchScreenKeyboardEvent, Unity.TextMeshPro,
-      Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
   m_CaretColor: {r: 0.19607843, g: 0.19607843, b: 0.19607843, a: 1}
   m_CustomCaretColor: 0
   m_SelectionColor: {r: 0.65882355, g: 0.80784315, b: 1, a: 0.7529412}
@@ -1590,8 +1556,6 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
-      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_Sprite: {fileID: 0}
   m_Type: 0
   m_PreserveAspect: 0
@@ -1613,6 +1577,76 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Color
+      objectReference: {fileID: 0}
+    - target: {fileID: 329480821251442370, guid: d6a056d9d3dc78b4ea055ecdc3c8668c,
+        type: 3}
+      propertyPath: m_text
+      value: 10%
+      objectReference: {fileID: 0}
+    - target: {fileID: 329480821251442370, guid: d6a056d9d3dc78b4ea055ecdc3c8668c,
+        type: 3}
+      propertyPath: m_fontSize
+      value: 12
+      objectReference: {fileID: 0}
+    - target: {fileID: 329480821251442370, guid: d6a056d9d3dc78b4ea055ecdc3c8668c,
+        type: 3}
+      propertyPath: m_fontSizeBase
+      value: 12
+      objectReference: {fileID: 0}
+    - target: {fileID: 329480821251442370, guid: d6a056d9d3dc78b4ea055ecdc3c8668c,
+        type: 3}
+      propertyPath: m_textAlignment
+      value: 514
+      objectReference: {fileID: 0}
+    - target: {fileID: 329480821251442370, guid: d6a056d9d3dc78b4ea055ecdc3c8668c,
+        type: 3}
+      propertyPath: m_firstOverflowCharacterIndex
+      value: -1
+      objectReference: {fileID: 0}
+    - target: {fileID: 329480821251442370, guid: d6a056d9d3dc78b4ea055ecdc3c8668c,
+        type: 3}
+      propertyPath: m_isTextTruncated
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 329480821251442370, guid: d6a056d9d3dc78b4ea055ecdc3c8668c,
+        type: 3}
+      propertyPath: m_margin.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 329480821251442370, guid: d6a056d9d3dc78b4ea055ecdc3c8668c,
+        type: 3}
+      propertyPath: m_margin.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 329480821251442370, guid: d6a056d9d3dc78b4ea055ecdc3c8668c,
+        type: 3}
+      propertyPath: m_margin.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 329480821251442370, guid: d6a056d9d3dc78b4ea055ecdc3c8668c,
+        type: 3}
+      propertyPath: m_margin.w
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 329480821251442370, guid: d6a056d9d3dc78b4ea055ecdc3c8668c,
+        type: 3}
+      propertyPath: m_textInfo.characterCount
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 329480821251442370, guid: d6a056d9d3dc78b4ea055ecdc3c8668c,
+        type: 3}
+      propertyPath: m_textInfo.wordCount
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 329480821251442370, guid: d6a056d9d3dc78b4ea055ecdc3c8668c,
+        type: 3}
+      propertyPath: m_textInfo.lineCount
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 329480821251442370, guid: d6a056d9d3dc78b4ea055ecdc3c8668c,
+        type: 3}
+      propertyPath: m_textInfo.pageCount
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 329480821251442371, guid: d6a056d9d3dc78b4ea055ecdc3c8668c,
         type: 3}
@@ -1719,81 +1753,6 @@ PrefabInstance:
       propertyPath: m_Pivot.y
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 329480821251442370, guid: d6a056d9d3dc78b4ea055ecdc3c8668c,
-        type: 3}
-      propertyPath: m_text
-      value: 10%
-      objectReference: {fileID: 0}
-    - target: {fileID: 329480821251442370, guid: d6a056d9d3dc78b4ea055ecdc3c8668c,
-        type: 3}
-      propertyPath: m_firstOverflowCharacterIndex
-      value: -1
-      objectReference: {fileID: 0}
-    - target: {fileID: 329480821251442370, guid: d6a056d9d3dc78b4ea055ecdc3c8668c,
-        type: 3}
-      propertyPath: m_isTextTruncated
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 329480821251442370, guid: d6a056d9d3dc78b4ea055ecdc3c8668c,
-        type: 3}
-      propertyPath: m_textInfo.characterCount
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 329480821251442370, guid: d6a056d9d3dc78b4ea055ecdc3c8668c,
-        type: 3}
-      propertyPath: m_textInfo.spaceCount
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 329480821251442370, guid: d6a056d9d3dc78b4ea055ecdc3c8668c,
-        type: 3}
-      propertyPath: m_textInfo.wordCount
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 329480821251442370, guid: d6a056d9d3dc78b4ea055ecdc3c8668c,
-        type: 3}
-      propertyPath: m_textInfo.lineCount
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 329480821251442370, guid: d6a056d9d3dc78b4ea055ecdc3c8668c,
-        type: 3}
-      propertyPath: m_textInfo.pageCount
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 329480821251442370, guid: d6a056d9d3dc78b4ea055ecdc3c8668c,
-        type: 3}
-      propertyPath: m_fontSize
-      value: 12
-      objectReference: {fileID: 0}
-    - target: {fileID: 329480821251442370, guid: d6a056d9d3dc78b4ea055ecdc3c8668c,
-        type: 3}
-      propertyPath: m_fontSizeBase
-      value: 12
-      objectReference: {fileID: 0}
-    - target: {fileID: 329480821251442370, guid: d6a056d9d3dc78b4ea055ecdc3c8668c,
-        type: 3}
-      propertyPath: m_textAlignment
-      value: 514
-      objectReference: {fileID: 0}
-    - target: {fileID: 329480821251442370, guid: d6a056d9d3dc78b4ea055ecdc3c8668c,
-        type: 3}
-      propertyPath: m_margin.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 329480821251442370, guid: d6a056d9d3dc78b4ea055ecdc3c8668c,
-        type: 3}
-      propertyPath: m_margin.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 329480821251442370, guid: d6a056d9d3dc78b4ea055ecdc3c8668c,
-        type: 3}
-      propertyPath: m_margin.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 329480821251442370, guid: d6a056d9d3dc78b4ea055ecdc3c8668c,
-        type: 3}
-      propertyPath: m_margin.w
-      value: 0
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d6a056d9d3dc78b4ea055ecdc3c8668c, type: 3}
 --- !u!224 &6295515107572741692 stripped
@@ -1825,6 +1784,76 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: ColorLabel
+      objectReference: {fileID: 0}
+    - target: {fileID: 329480821251442370, guid: d6a056d9d3dc78b4ea055ecdc3c8668c,
+        type: 3}
+      propertyPath: m_text
+      value: Color
+      objectReference: {fileID: 0}
+    - target: {fileID: 329480821251442370, guid: d6a056d9d3dc78b4ea055ecdc3c8668c,
+        type: 3}
+      propertyPath: m_fontSize
+      value: 12
+      objectReference: {fileID: 0}
+    - target: {fileID: 329480821251442370, guid: d6a056d9d3dc78b4ea055ecdc3c8668c,
+        type: 3}
+      propertyPath: m_fontSizeBase
+      value: 12
+      objectReference: {fileID: 0}
+    - target: {fileID: 329480821251442370, guid: d6a056d9d3dc78b4ea055ecdc3c8668c,
+        type: 3}
+      propertyPath: m_textAlignment
+      value: 514
+      objectReference: {fileID: 0}
+    - target: {fileID: 329480821251442370, guid: d6a056d9d3dc78b4ea055ecdc3c8668c,
+        type: 3}
+      propertyPath: m_firstOverflowCharacterIndex
+      value: -1
+      objectReference: {fileID: 0}
+    - target: {fileID: 329480821251442370, guid: d6a056d9d3dc78b4ea055ecdc3c8668c,
+        type: 3}
+      propertyPath: m_isTextTruncated
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 329480821251442370, guid: d6a056d9d3dc78b4ea055ecdc3c8668c,
+        type: 3}
+      propertyPath: m_margin.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 329480821251442370, guid: d6a056d9d3dc78b4ea055ecdc3c8668c,
+        type: 3}
+      propertyPath: m_margin.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 329480821251442370, guid: d6a056d9d3dc78b4ea055ecdc3c8668c,
+        type: 3}
+      propertyPath: m_margin.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 329480821251442370, guid: d6a056d9d3dc78b4ea055ecdc3c8668c,
+        type: 3}
+      propertyPath: m_margin.w
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 329480821251442370, guid: d6a056d9d3dc78b4ea055ecdc3c8668c,
+        type: 3}
+      propertyPath: m_textInfo.characterCount
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 329480821251442370, guid: d6a056d9d3dc78b4ea055ecdc3c8668c,
+        type: 3}
+      propertyPath: m_textInfo.wordCount
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 329480821251442370, guid: d6a056d9d3dc78b4ea055ecdc3c8668c,
+        type: 3}
+      propertyPath: m_textInfo.lineCount
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 329480821251442370, guid: d6a056d9d3dc78b4ea055ecdc3c8668c,
+        type: 3}
+      propertyPath: m_textInfo.pageCount
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 329480821251442371, guid: d6a056d9d3dc78b4ea055ecdc3c8668c,
         type: 3}
@@ -1931,81 +1960,6 @@ PrefabInstance:
       propertyPath: m_Pivot.y
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 329480821251442370, guid: d6a056d9d3dc78b4ea055ecdc3c8668c,
-        type: 3}
-      propertyPath: m_text
-      value: Color
-      objectReference: {fileID: 0}
-    - target: {fileID: 329480821251442370, guid: d6a056d9d3dc78b4ea055ecdc3c8668c,
-        type: 3}
-      propertyPath: m_firstOverflowCharacterIndex
-      value: -1
-      objectReference: {fileID: 0}
-    - target: {fileID: 329480821251442370, guid: d6a056d9d3dc78b4ea055ecdc3c8668c,
-        type: 3}
-      propertyPath: m_isTextTruncated
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 329480821251442370, guid: d6a056d9d3dc78b4ea055ecdc3c8668c,
-        type: 3}
-      propertyPath: m_textInfo.characterCount
-      value: 5
-      objectReference: {fileID: 0}
-    - target: {fileID: 329480821251442370, guid: d6a056d9d3dc78b4ea055ecdc3c8668c,
-        type: 3}
-      propertyPath: m_textInfo.spaceCount
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 329480821251442370, guid: d6a056d9d3dc78b4ea055ecdc3c8668c,
-        type: 3}
-      propertyPath: m_textInfo.wordCount
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 329480821251442370, guid: d6a056d9d3dc78b4ea055ecdc3c8668c,
-        type: 3}
-      propertyPath: m_textInfo.lineCount
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 329480821251442370, guid: d6a056d9d3dc78b4ea055ecdc3c8668c,
-        type: 3}
-      propertyPath: m_textInfo.pageCount
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 329480821251442370, guid: d6a056d9d3dc78b4ea055ecdc3c8668c,
-        type: 3}
-      propertyPath: m_fontSize
-      value: 12
-      objectReference: {fileID: 0}
-    - target: {fileID: 329480821251442370, guid: d6a056d9d3dc78b4ea055ecdc3c8668c,
-        type: 3}
-      propertyPath: m_fontSizeBase
-      value: 12
-      objectReference: {fileID: 0}
-    - target: {fileID: 329480821251442370, guid: d6a056d9d3dc78b4ea055ecdc3c8668c,
-        type: 3}
-      propertyPath: m_textAlignment
-      value: 514
-      objectReference: {fileID: 0}
-    - target: {fileID: 329480821251442370, guid: d6a056d9d3dc78b4ea055ecdc3c8668c,
-        type: 3}
-      propertyPath: m_margin.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 329480821251442370, guid: d6a056d9d3dc78b4ea055ecdc3c8668c,
-        type: 3}
-      propertyPath: m_margin.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 329480821251442370, guid: d6a056d9d3dc78b4ea055ecdc3c8668c,
-        type: 3}
-      propertyPath: m_margin.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 329480821251442370, guid: d6a056d9d3dc78b4ea055ecdc3c8668c,
-        type: 3}
-      propertyPath: m_margin.w
-      value: 0
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d6a056d9d3dc78b4ea055ecdc3c8668c, type: 3}
 --- !u!224 &6295515108334556273 stripped
@@ -2025,6 +1979,65 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Help
+      objectReference: {fileID: 0}
+    - target: {fileID: 329480821251442370, guid: d6a056d9d3dc78b4ea055ecdc3c8668c,
+        type: 3}
+      propertyPath: m_text
+      value: 'Left Click to Draw
+
+        Right Click to Erase
+
+        Wheel to Change Color'
+      objectReference: {fileID: 0}
+    - target: {fileID: 329480821251442370, guid: d6a056d9d3dc78b4ea055ecdc3c8668c,
+        type: 3}
+      propertyPath: m_fontSize
+      value: 18
+      objectReference: {fileID: 0}
+    - target: {fileID: 329480821251442370, guid: d6a056d9d3dc78b4ea055ecdc3c8668c,
+        type: 3}
+      propertyPath: m_fontSizeBase
+      value: 18
+      objectReference: {fileID: 0}
+    - target: {fileID: 329480821251442370, guid: d6a056d9d3dc78b4ea055ecdc3c8668c,
+        type: 3}
+      propertyPath: m_textAlignment
+      value: 514
+      objectReference: {fileID: 0}
+    - target: {fileID: 329480821251442370, guid: d6a056d9d3dc78b4ea055ecdc3c8668c,
+        type: 3}
+      propertyPath: m_firstOverflowCharacterIndex
+      value: -1
+      objectReference: {fileID: 0}
+    - target: {fileID: 329480821251442370, guid: d6a056d9d3dc78b4ea055ecdc3c8668c,
+        type: 3}
+      propertyPath: m_isTextTruncated
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 329480821251442370, guid: d6a056d9d3dc78b4ea055ecdc3c8668c,
+        type: 3}
+      propertyPath: m_textInfo.characterCount
+      value: 61
+      objectReference: {fileID: 0}
+    - target: {fileID: 329480821251442370, guid: d6a056d9d3dc78b4ea055ecdc3c8668c,
+        type: 3}
+      propertyPath: m_textInfo.spaceCount
+      value: 11
+      objectReference: {fileID: 0}
+    - target: {fileID: 329480821251442370, guid: d6a056d9d3dc78b4ea055ecdc3c8668c,
+        type: 3}
+      propertyPath: m_textInfo.wordCount
+      value: 12
+      objectReference: {fileID: 0}
+    - target: {fileID: 329480821251442370, guid: d6a056d9d3dc78b4ea055ecdc3c8668c,
+        type: 3}
+      propertyPath: m_textInfo.lineCount
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 329480821251442370, guid: d6a056d9d3dc78b4ea055ecdc3c8668c,
+        type: 3}
+      propertyPath: m_textInfo.pageCount
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 329480821251442371, guid: d6a056d9d3dc78b4ea055ecdc3c8668c,
         type: 3}
@@ -2130,65 +2143,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Pivot.y
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 329480821251442370, guid: d6a056d9d3dc78b4ea055ecdc3c8668c,
-        type: 3}
-      propertyPath: m_text
-      value: 'Left Click to Draw
-
-        Right Click to Erase
-
-        Wheel to Change Color'
-      objectReference: {fileID: 0}
-    - target: {fileID: 329480821251442370, guid: d6a056d9d3dc78b4ea055ecdc3c8668c,
-        type: 3}
-      propertyPath: m_firstOverflowCharacterIndex
-      value: -1
-      objectReference: {fileID: 0}
-    - target: {fileID: 329480821251442370, guid: d6a056d9d3dc78b4ea055ecdc3c8668c,
-        type: 3}
-      propertyPath: m_isTextTruncated
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 329480821251442370, guid: d6a056d9d3dc78b4ea055ecdc3c8668c,
-        type: 3}
-      propertyPath: m_textInfo.characterCount
-      value: 61
-      objectReference: {fileID: 0}
-    - target: {fileID: 329480821251442370, guid: d6a056d9d3dc78b4ea055ecdc3c8668c,
-        type: 3}
-      propertyPath: m_textInfo.spaceCount
-      value: 11
-      objectReference: {fileID: 0}
-    - target: {fileID: 329480821251442370, guid: d6a056d9d3dc78b4ea055ecdc3c8668c,
-        type: 3}
-      propertyPath: m_textInfo.wordCount
-      value: 12
-      objectReference: {fileID: 0}
-    - target: {fileID: 329480821251442370, guid: d6a056d9d3dc78b4ea055ecdc3c8668c,
-        type: 3}
-      propertyPath: m_textInfo.lineCount
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 329480821251442370, guid: d6a056d9d3dc78b4ea055ecdc3c8668c,
-        type: 3}
-      propertyPath: m_textInfo.pageCount
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 329480821251442370, guid: d6a056d9d3dc78b4ea055ecdc3c8668c,
-        type: 3}
-      propertyPath: m_fontSize
-      value: 18
-      objectReference: {fileID: 0}
-    - target: {fileID: 329480821251442370, guid: d6a056d9d3dc78b4ea055ecdc3c8668c,
-        type: 3}
-      propertyPath: m_fontSizeBase
-      value: 18
-      objectReference: {fileID: 0}
-    - target: {fileID: 329480821251442370, guid: d6a056d9d3dc78b4ea055ecdc3c8668c,
-        type: 3}
-      propertyPath: m_textAlignment
-      value: 514
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d6a056d9d3dc78b4ea055ecdc3c8668c, type: 3}

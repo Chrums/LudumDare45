@@ -37,6 +37,11 @@ namespace Fizz6.LudumDare45
             {
                 Dimension2DManager.CurrentFrame++;
             }
+
+            if (Input.GetButtonDown("Fire1"))
+            {
+                Dimension2DManager.SetDimensions(Dimension2DManager.VerticalAxis, Dimension2DManager.HorizontalAxis);
+            }
         }
     }
 }

@@ -16,6 +16,7 @@ namespace Fizz6.LudumDare45
             rigidbody = GetComponent<Rigidbody2D>();
 
             Dimension2DManager.CurrentFrameChangeEvent += OnCurrentFrameChanged;
+            Dimension2DManager.DimensionChangeEvent += OnDimensionsChanged;
 
             float[] positionState = new float[4]
             {
@@ -47,6 +48,51 @@ namespace Fizz6.LudumDare45
         {
             UpdatePosition(currentFrame, nextFrame);
             UpdateVelocity(currentFrame, nextFrame);
+        }
+        private void UpdatePosition(Dimension2DManager.Dimension currentHorizontalDimension, Dimension2DManager.Dimension currentVerticalDimension, Dimension2DManager.Dimension nextHorizontalDimension, Dimension2DManager.Dimension nextVerticalDimension)
+        {
+            float[] previousPositionState = Dimension2DManager.CurrentFrame == 0
+                ? null
+                : positionHistory[Dimension2DManager.CurrentFrame - 1];
+
+            float[] positionState = positionHistory[Dimension2DManager.CurrentFrame] == null
+                ? new float[4] { previousPositionState[0], previousPositionState[1], previousPositionState[2], previousPositionState[3] }
+                : positionHistory[Dimension2DManager.CurrentFrame];
+
+            positionState[(int)currentHorizontalDimension] = transform.position.x;
+            positionState[(int)currentVerticalDimension] = transform.position.y;
+
+            positionHistory[Dimension2DManager.CurrentFrame] = positionState;
+
+            float[] nextState = positionHistory[Dimension2DManager.CurrentFrame];
+
+            float horizontal = nextState[(int)nextHorizontalDimension];
+            float vertical = nextState[(int)nextVerticalDimension];
+            Vector3 position = new Vector3(horizontal, vertical, 0.0f);
+            transform.position = position;
+        }
+
+        private void UpdateVelocity(Dimension2DManager.Dimension currentHorizontalDimension, Dimension2DManager.Dimension currentVerticalDimension, Dimension2DManager.Dimension nextHorizontalDimension, Dimension2DManager.Dimension nextVerticalDimension)
+        {
+            float[] previousPositionState = Dimension2DManager.CurrentFrame == 0
+                ? null
+                : positionHistory[Dimension2DManager.CurrentFrame - 1];
+
+            float[] positionState = positionHistory[Dimension2DManager.CurrentFrame] == null
+                ? new float[4] { previousPositionState[0], previousPositionState[1], previousPositionState[2], previousPositionState[3] }
+                : positionHistory[Dimension2DManager.CurrentFrame];
+
+            positionState[(int)currentHorizontalDimension] = rigidbody.velocity.x;
+            positionState[(int)currentVerticalDimension] = rigidbody.velocity.y;
+
+            positionHistory[Dimension2DManager.CurrentFrame] = positionState;
+
+            float[] nextState = positionHistory[Dimension2DManager.CurrentFrame];
+
+            float horizontal = nextState[(int)nextHorizontalDimension];
+            float vertical = nextState[(int)nextVerticalDimension];
+            Vector3 position = new Vector3(horizontal, vertical, 0.0f);
+            rigidbody.velocity = position;
         }
 
         private void UpdatePosition(int currentFrame, int nextFrame)
@@ -113,6 +159,12 @@ namespace Fizz6.LudumDare45
             float vertical = nextState[(int)Dimension2DManager.VerticalAxis];
             Vector3 velocity = new Vector3(horizontal, vertical, 0.0f);
             rigidbody.velocity = velocity;
+        }
+
+        private void OnDimensionsChanged(Dimension2DManager.Dimension currentHorizontalDimension, Dimension2DManager.Dimension currentVerticalDimension, Dimension2DManager.Dimension nextHorizontalDimension, Dimension2DManager.Dimension nextVerticalDimension)
+        {
+            UpdatePosition(currentHorizontalDimension, currentVerticalDimension, nextHorizontalDimension, nextVerticalDimension);
+            UpdateVelocity(currentHorizontalDimension, currentVerticalDimension, nextHorizontalDimension, nextVerticalDimension);
         }
     }
 }

@@ -46,6 +46,9 @@ namespace Fizz6.LudumDare45
 
         private readonly string nothingName = "Nothing";
 
+        [SerializeField]
+        private GameObject levelPrefab = null;
+
         private async void Awake()
         {
             Player.Texture = new Texture2D(32, 32);
@@ -181,6 +184,8 @@ namespace Fizz6.LudumDare45
                 image.color = new Color(image.color.r, image.color.g, image.color.b, alpha);
                 await Task.Delay(TimeSpan.FromSeconds(0.01));
             }
+
+            Instantiate(levelPrefab);
         }
 
         public static Rect RectTransformToScreenSpace(RectTransform transform)

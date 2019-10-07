@@ -23,7 +23,7 @@ namespace Fizz6.LudumDare45
 
                 if (sprite == null)
                 {
-                    sprite = Sprite.Create(Texture, new Rect(Vector2.zero, new Vector2(Texture.width, Texture.height)), new Vector2(0.5f, 0.5f));
+                    sprite = Sprite.Create(Texture, new Rect(Vector2.zero, new Vector2(Texture.width, Texture.height)), new Vector2(0.5f, 0.5f), Texture.width);
                 }
 
                 return sprite;
